@@ -1,0 +1,7 @@
+services:
+  mypy_checker:
+    image: python:3.12
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ["poetry", "run", "mypy", "."]
